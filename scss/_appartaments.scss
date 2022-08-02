@@ -1,0 +1,80 @@
+.appartaments{
+    padding: 60px 0 95px;
+    background: $sectionBg;
+    .down-part{
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        margin-top: 55px;
+        form{
+            @include search-form();
+            @media (max-width:610px) {
+                width: 100%;
+            }
+        }
+        button{
+            padding: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #fff;
+            transition: background .3s, color .3s;
+            &:hover{
+                background: $textColor;
+                color: #fff;
+            }
+        }
+        @media (max-width:610px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 35px;
+            column-gap: 0;
+        }
+    }
+}
+
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 80px;
+    @media (max-width:610px) {
+        row-gap: 35px;
+        column-gap: 0;
+    }
+}
+
+.card-item{
+    width: calc(33.33% - 24px);
+    background: #fff;
+    box-shadow: 2px 2px 25px rgba($color: $textColor, $alpha: .15);
+    .card-img{
+        width: 100%;
+    }
+    .text-part{
+        padding: 25px;
+        &-footer{
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .card-flex{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+    .card-yellow{
+        color: $primary;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    @media (max-width:992px) {
+        width: calc(50% - 24px);
+    }
+    @media (max-width:610px) {
+       width: 100%;
+    }
+}

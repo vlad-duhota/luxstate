@@ -1,0 +1,150 @@
+// fonts
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/montserrat-v21-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v21-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('../fonts/montserrat-v21-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v21-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+// vars
+$textColor: #1f373d;
+$primary: #ffcc01;
+$sectionBg: #f6f5f4;
+$lightTextColor: #9aa5b7;
+$container: 1130px;
+
+// mixins
+@mixin search-form {
+    display: flex;
+    width: 475px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    .search-input{
+        color: $lightTextColor;
+        width: 100%;
+        padding: 20px;
+        padding-left: 40px;
+        background: url(../img/search.svg) 16px / 16px 16px no-repeat;
+        border: none;
+        &:focus{
+            outline: none;
+            border: 2px solid $primary;
+        }
+    }
+    .search-btn{
+        border: none;
+        background: $primary;
+        padding: 20px;
+    }
+}
+
+// global
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: $container;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+html{
+    font-size: 13px;
+}
+
+body{
+    font-size: 1rem;
+    font-family: 'Montserrat', serif;
+    color: $textColor;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+input{
+    font-family: 'Montserrat', serif;
+    font-size: 1.1rem;
+}
+
+button{
+    font-family: 'Montserrat', serif;
+    font-size: 1.1rem;
+    color: $textColor;
+    font-weight: 600;
+}
+.section-title{
+    font-size: 3rem;
+    @media (max-width:768px) {
+        font-size: 2.6rem;
+    }
+    @media (max-width:475px) {
+        text-align: center;
+    }
+}
+
+// header
+@import 'header';
+
+// hero
+
+@import 'hero';
+
+// statistics
+@import 'statistics';
+
+// appartaments
+@import 'appartaments';
+
+// how it works
+@import 'how';
+
+// services
+@import 'services';
+
+// agents
+@import 'agents';
+
+// add section 
+@import 'add';
+
+
+// customize default browser scrollbar
+
+::-webkit-scrollbar{
+    width: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+    padding: 10px;
+    background: $primary;
+    border-radius: 20px;
+    border: 5px solid #fff;
+}
